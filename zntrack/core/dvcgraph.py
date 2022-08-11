@@ -473,7 +473,7 @@ class GraphWriter:
             custom_args += pair
 
         if call_args is None:
-            call_args = f".load(name='{self.node_name}').run_and_save()"
+            call_args = f"['{self.node_name}'].run_and_save()"
 
         script = prepare_dvc_script(
             node_name=self.node_name,
